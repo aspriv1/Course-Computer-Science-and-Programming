@@ -1,0 +1,764 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": [
+        "axJOWWs3iLtu",
+        "WQFSKkaIkAwe",
+        "O-ceUosBoTsO",
+        "nHtt4SPZ2AZQ",
+        "Xc6hySnpsfrm"
+      ]
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "ci1NuU2xjUXN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Введение\n"
+      ],
+      "metadata": {
+        "id": "axJOWWs3iLtu"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Компьютерная программа** — список команд (инструкций) для компьютера. Команды могут быть любыми, например:\n",
+        "\n",
+        "\n",
+        "\n",
+        "*   считать информацию с клавиатуры;\n",
+        "*   произвести арифметические вычисления ;\n",
+        "- вывести информацию на экран.\n",
+        "\n",
+        "В каждом компьютере установлено много разнообразных программ. Например, Google Chrome — это программа-браузер. Она позволяет просматривать страницы сайтов в интернете. Программа Тelegram позволяет совершать звонки и обмениваться мгновенными сообщениями. В конце концов, сама операционная система, будь то Windows, OS X или Linux, тоже программа.\n",
+        "\n",
+        "Для создания программ используются языки программирования. Выбор языка программирования, как правило, продиктован особенностями самой программы."
+      ],
+      "metadata": {
+        "id": "igatV8Q2j1xt"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Язык Python"
+      ],
+      "metadata": {
+        "id": "WQFSKkaIkAwe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Язык Python разработал голландский программист Гвидо Ван Россум (Guido van Rossum) в 1991 году. Гвидо был фанатом британского комедийного сериала «Monty Python’s Flying Circus», откуда и пришло название языка.\n",
+        "\n",
+        "Основные версии языка Python – Python 2 и Python 3. Версия Python 2 считается устаревающей, версия 3 — более новой и современной."
+      ],
+      "metadata": {
+        "id": "W15hfDYnOtRU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "NIEH_HD30tje"
+      },
+      "outputs": [],
+      "source": [
+        "!python --version"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=10**100\n",
+        "x"
+      ],
+      "metadata": {
+        "id": "vau4HaygIPRj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Преимущества Python"
+      ],
+      "metadata": {
+        "id": "bChmLYkCkxBf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Это интерпретируемый язык программирования:\n",
+        "- он не требует отдельного этапа компиляции;\n",
+        "- программа на языке Python запускается прямо из исходного кода;\n",
+        "2. Это высокоуровневый язык программирования;\n",
+        "3. Это платформонезависимый язык:\n",
+        "- программы на Python можно создавать на разных операционных системах (Linux, Windows, OS X);\n",
+        "- программы на Python можно запускать на разных операционных системах (Linux, Windows, OS X);\n",
+        "4. Это open source проект;\n",
+        "5. Это простой язык;\n",
+        "6. Это встраиваемый скриптовый язык;\n",
+        "7. Это динамический язык, что упрощает написание несложных программ;\n",
+        "8. Для Python существует огромная библиотека классов на любой вкус."
+      ],
+      "metadata": {
+        "id": "BXaMzJhQk2Ft"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Недостатки Python"
+      ],
+      "metadata": {
+        "id": "17_vWKpXleC2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Низкая скорость выполнения по сравнению с такими языками, как C и C++;\n",
+        "2. Динамическая типизация языка — минус при написании сложных программ."
+      ],
+      "metadata": {
+        "id": "8AMyPpIAlf52"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Задачи, решаемые с помощью Python"
+      ],
+      "metadata": {
+        "id": "jKH6rwnRlspI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Системное программирование. Встроенные в  Python интерфейсы доступа к службам операционных систем делают его идеальным инструментом для создания переносимых программ и утилит системного администрирования;\n",
+        "\n",
+        "2. Графические приложения. Простота Python и быстрота разработки делают его отличным средством создания графического интерфейса. В состав Python входит стандартный объектно-ориентированный интерфейс к GUI API;\n",
+        "\n",
+        "3. Веб-приложения. С помощью дополнительных фреймворков на языке Python (Django, Flask, Pyramid) можно создавать полнофункциональные сайты;\n",
+        "\n",
+        "4. Веб-сценарии. Python поставляется вместе со стандартными интернет-модулями, которые позволяют программам выполнять разнообразные сетевые операции как в режиме клиента, так и в режиме сервера;\n",
+        "\n",
+        "5. Интеграция компонентов. Возможность Python расширяться и встраиваться в системы на языке C++ делает его удобным для описания поведения других систем и компонентов;\n",
+        "\n",
+        "6. Приложения баз данных. В Python имеются интерфейсы доступа ко всем основным реляционным базам данных: Sybase, Oracle, Informix, ODBC, MySQL, PostgreSQL, SQLite и многим другим. С их помощью можно создавать приложения баз данных."
+      ],
+      "metadata": {
+        "id": "CKqmfDz8lugX"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Проекты, в которых используется Python"
+      ],
+      "metadata": {
+        "id": "INlBbV1dmWAH"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "- Компания Google использует Python в своей поисковой системе;\n",
+        "\n",
+        "- Компании Intel, Cisco, Hewlett-Packard, Seagate, Qualcomm и IBM, используют Python для тестирования аппаратного обеспечения;\n",
+        "\n",
+        "- Сервис YouTube в значительной степени реализован на Python;\n",
+        "\n",
+        "- Агентство национальной безопасности (NSA) использует Python для шифрования и анализа данных;\n",
+        "\n",
+        "- Компании JPMorgan Chase, UBS, Getco и Citadel применяют Python для прогнозирования финансового рынка;\n",
+        "\n",
+        "- Программа BitTorrent для обмена файлами в пиринговых сетях написана на языке Python;\n",
+        "\n",
+        "- NASA, Los Alamos, JPL и Fermilab используют Python для научных вычислений."
+      ],
+      "metadata": {
+        "id": "9QXB0o9RmYwf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Философия Python"
+      ],
+      "metadata": {
+        "id": "_h0I7GKGnOQP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Красивое лучше, чем уродливое;\n",
+        "2. Явное лучше, чем неявное;\n",
+        "3. Простое лучше, чем сложное;\n",
+        "4. Сложное лучше, чем запутанное;\n",
+        "5. Плоское лучше, чем вложенное;\n",
+        "6. Разреженное лучше, чем плотное;\n",
+        "7. Читаемость имеет значение;\n",
+        "8. Особые случаи не настолько особые, чтобы нарушать правила;\n",
+        "9. При этом практичность важнее безупречности;\n",
+        "10. Ошибки никогда не должны замалчиваться;\n",
+        "11. Если не замалчиваются явно;\n",
+        "12. Встретив двусмысленность, отбрось искушение угадать;\n",
+        "13. Должен существовать один — и, желательно, только один — очевидный способ сделать это;\n",
+        "14. Хотя он поначалу может быть и не очевиден, если вы не голландец;\n",
+        "15. Сейчас лучше, чем никогда;\n",
+        "16. Хотя никогда зачастую лучше, чем прямо сейчас;\n",
+        "17. Если реализацию сложно объяснить — идея плоха;\n",
+        "18. Если реализацию легко объяснить — идея, возможно, хороша;\n",
+        "19. Пространства имён — отличная вещь! Давайте будем делать их больше!\n",
+        "\n",
+        "Оригинал  import this"
+      ],
+      "metadata": {
+        "id": "rXmk0eRInUiQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ввод-вывод данных"
+      ],
+      "metadata": {
+        "id": "O-ceUosBoTsO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Вывод данных, команда print"
+      ],
+      "metadata": {
+        "id": "X3RPxAwLoY-v"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Для вывода данных на экран используется команда **print()**.\n",
+        "\n",
+        "Внутри круглых скобок пишем, что хотим вывести на экран. Если это текст, то обязательно указываем его внутри кавычек. Кавычки могут быть одинарными (') или двойными (\"). До и после текста мы ставим только одинаковые кавычки.\n",
+        "\n",
+        "Приведённый ниже код:\n",
+        "```\n",
+        "print('Мы изучаем язык Python')\n",
+        "```\n",
+        "выводит:\n",
+        "\n",
+        "Мы изучаем язык Python\n",
+        "\n",
+        "**Запомни!!!**: кавычки могут быть или одинарными, или двойными. Следующие две строки делают одно и то же:\n",
+        "```\n",
+        "print('Python')\n",
+        "print(\"Python\")\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "YQHaimFYongG"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Аргументы команды print()"
+      ],
+      "metadata": {
+        "id": "sFw2ia4KODgg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "То, что мы пишем в круглых скобках у команды print(), называется **аргументами команды.**\n",
+        "\n",
+        "**Аргументы** – это конкретные значения, которые вы передаете функции при ее вызове.\n",
+        "\n",
+        "Команда print() позволяет указывать несколько аргументов, в таком случае их надо отделять запятыми.\n",
+        "\n",
+        "Приведённый ниже код:\n",
+        "```\n",
+        "print('Я', 'учусь', 'программировать', 'на', 'Python!')\n",
+        "```\n",
+        "выводит:\n",
+        "```\n",
+        "Я учусь программировать на Python!\n",
+        "```\n",
+        "Обратите внимание, в качестве разделителя при выводе данных между аргументами команды используется символ пробела. По умолчанию команда print() добавляет ровно один пробел между всеми своими аргументами.\n",
+        "\n",
+        "Приведённый ниже код:\n",
+        "```\n",
+        "print('1', '2', '4', '8', '16')\n",
+        "```\n",
+        "выводит:\n",
+        "```\n",
+        "1 2 4 8 16\n",
+        "```\n",
+        "**Запомни**!!! Текст, выделенный полужирным шрифтом: при написании кода между аргументами команды print() после запятой мы ставим один символ пробел. Это общепринятое соглашение в языке Python. Этот символ пробела не влияет на вывод данных. Это просто для читабельности кода."
+      ],
+      "metadata": {
+        "id": "7VtXiHR3qO5F"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Примечания"
+      ],
+      "metadata": {
+        "id": "gnrpEuX9rDoe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Примечание** 1. Команда print() записывается только маленькими буквами, другое написание недопустимо, так как в Python строчные и заглавные буквы различны.\n",
+        "\n",
+        "**Примечание** 2. Каждая последующая команда print() выводит указанный текст с новой строки.\n",
+        "\n",
+        "Приведённый ниже код:\n",
+        "```\n",
+        "print('Какой хороший день!')\n",
+        "print('Работать мне не лень!')\n",
+        "```\n",
+        "выводит:\n",
+        "```\n",
+        "Какой хороший день!\n",
+        "Работать мне не лень!\n",
+        "```\n",
+        "**Примечание** 3. Команда print() с пустым списком аргументов просто вставляет новую пустую строку.\n",
+        "\n",
+        "Приведённый ниже код:\n",
+        "```\n",
+        "print('Какой хороший день!')\n",
+        "print()\n",
+        "print('Работать мне не лень!')\n",
+        "```\n",
+        "выводит:\n",
+        "```\n",
+        "Какой хороший день!\n",
+        "\n",
+        "Работать мне не лень!\n",
+        "```\n",
+        "Обратите внимание на то, что вторая строка пустая.\n",
+        "\n",
+        "**Примечание** 4. Почему в Python можно использовать как одинарные, так и двойные кавычки для обрамления текста? Ответ очень прост — часто кавычки являются частью текста. И чтобы Python мог правильно распознать такой текст, пользуемся разными:\n",
+        "\n",
+        "- если в тексте нужны одинарные кавычки, то для обрамления такого текста используем двойные кавычки;\n",
+        "- если в тексте нужны двойные кавычки, то обрамляем его одинарными.\n",
+        "\n",
+        "Приведённый ниже код:\n",
+        "```\n",
+        "print('В тексте есть \"двойные\" кавычки')\n",
+        "print(\"В тексте есть 'одинарные' кавычки\")\n",
+        "```\n",
+        "выводит:\n",
+        "```\n",
+        "В тексте есть \"двойные\" кавычки\n",
+        "В тексте есть 'одинарные' кавычки\n",
+        "```\n",
+        "**Примечание** 5. Обратите внимание, что в одном print() мы можем комбинировать одинарные и двойные кавычки. Это делает наш код более гибким, позволяя легко включать кавычки и апострофы в наши строки.\n",
+        "\n",
+        "Приведённый ниже код:\n",
+        "\n",
+        "print(\"I'm\", 'the', \"BAD\", 'guy')\n",
+        "выводит:\n",
+        "\n",
+        "I'm the BAD guy\n",
+        "Python не делает различий между одинарными и двойными кавычками: они работают одинаково для определения строк.\n",
+        "\n",
+        "**Примечание** 6. Мы не можем использовать одинарные кавычки в строке, если саму строку обрамляем одинарными кавычками. С двойными кавычками ситуация аналогичная.\n",
+        "\n",
+        "Приведённый ниже код:\n",
+        "```\n",
+        "print('12 ' 34')\n",
+        "```\n",
+        "приводит к возникновению ошибки:\n",
+        "```\n",
+        "SyntaxError: unterminated string literal (detected at line 1)\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "9-fdf0iirF__"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ввод данных, команда input(), переменные"
+      ],
+      "metadata": {
+        "id": "nHtt4SPZ2AZQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Все предыдущие программы выводили на экран текст, известный в момент написания программного кода. Однако программы могут работать с данными, которые станут известны только во время выполнения программы. Другими словами, программы могут считывать данные, а затем их использовать.\n",
+        "\n",
+        "Для считывания данных в языке Python используется команда input().\n",
+        "\n",
+        "Рассмотрим следующую программу:\n",
+        "```\n",
+        "print('Как тебя зовут?')     # вывод текста\n",
+        "\n",
+        "print('Привет,', input())    # ввод текста и вывод текста\n",
+        "```\n",
+        "Сначала программа распечатает текст на экран 'Как тебя зовут?'. Далее программа будет ждать от пользователя ввода данных. Ввод данных реализуется с помощью команды input(). И в конце произойдет вывод текста вместе с введенными от пользователя данными.\n",
+        "\n",
+        "Команда input() всегда пишется с круглыми скобками. Она работает так: когда программа доходит до места, где есть input(), она ждет, пока пользователь введет текст с клавиатуры (ввод завершается нажатием клавиши Enter). Введенная строка подставляется на место input().\n",
+        "\n",
+        "Команда input() получает от пользователя (нас) какие-то данные и вместо вызова подставляет строковое значение.\n",
+        "\n",
+        "**Запоминаем!!!**:\n",
+        "\n",
+        "Команда print() выводит данные на экран.\n",
+        "\n",
+        "Команда input() считывает данные, введенные с клавиатуры."
+      ],
+      "metadata": {
+        "id": "Jw29GhRf2F-A"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Переменные"
+      ],
+      "metadata": {
+        "id": "KClcGeAP3Jtx"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Команда input() обозначает: \"подожди, пока пользователь введет что-нибудь с клавиатуры, и запомни то, что он ввел\". Просто так просить \"запомнить\" довольно бессмысленно: нам ведь потом надо будет как-то сказать компьютеру, чтобы он вспомнил то, что запомнил! Для этого мы используем переменные и пишем следующий код:\n",
+        "```\n",
+        "variable_name = input()\n",
+        "print('Вы ввели текст:', variable_name)\n",
+        "```\n",
+        "Данный код означает: \"Сохрани то, что ввел пользователь, в памяти, и дальше это место в памяти мы будем называть именем variable_name\". Соответственно, команда print(variable_name) означает: \"Посмотри, что лежит в памяти под именем variable_name, и выведи это на экран\".\n",
+        "\n",
+        "Вот такие \"места в памяти\" и называются переменными. Любая переменная имеет имя и значение.\n",
+        "\n",
+        "**Переменные в команде print()**\n",
+        "\n",
+        "Как вы заметили, мы можем использовать переменные в команде print(). Для этого мы просто указываем имя переменной без кавычек внутри круглых скобок как аргумент.\n",
+        "\n",
+        "Приведенный ниже код:\n",
+        "```\n",
+        "city = 'Тула'\n",
+        "print(city, '- мой город!')\n",
+        "```\n",
+        "выводит:\n",
+        "```\n",
+        "Тула - мой город!\n",
+        "```\n",
+        "Мы можем использовать несколько переменных в команде print(), нам это никто не запрещает. Только стоит помнить, что аргументы в команде print() нужно отделять запятыми друг от друга.\n",
+        "\n",
+        "Приведенный ниже код:\n",
+        "```\n",
+        "name = 'Алеша'\n",
+        "city = 'Тула'\n",
+        "print('Меня зовут', name, '.', city, '- мой город!')\n",
+        "```\n",
+        "выводит:\n",
+        "```\n",
+        "Меня зовут Алеша . Тула - мой город!\n",
+        "```\n",
+        "**Имя переменной**\n",
+        "\n",
+        "1. В имени переменной рекомендуется использовать только латинские буквы a-z, A-Z, цифры и символ нижнего подчеркивания (_)\n",
+        "2. Имя переменной не может начинаться с цифры\n",
+        "3. Имя переменной не может содержать пробелы\n",
+        "4. Имя переменной по возможности должно отражать ее назначение\n",
+        "\n",
+        "**Запомни:** Python — регистрочувствительный язык. Переменная name и Name — две совершенно разные переменные.\n",
+        "\n",
+        "Для именования переменных принято использовать стиль lower_case_with_underscores (слова из маленьких букв с подчеркиваниями). Например, следующие имена для переменных хорошие:\n",
+        "\n",
+        "- server_response\n",
+        "- is_password_good\n",
+        "- username\n",
+        "- cyberpunk_77\n",
+        "\n",
+        "**Значение переменной**\n",
+        "\n",
+        "Значение переменной — это сохраненная в ней информация: текст, число и т.д.\n",
+        "\n",
+        "Символ = в языках программирования выступает в роли оператора присваивания. Он выполняет задачу связывания значения, расположенного справа от него, с именем переменной, указанной слева. Таким образом, переменная слева \"принимает\" или \"хранит\" значение, представленное выражением справа от знака =:\n",
+        "\n",
+        "**Запомни:** интерпретатор ждет, что пользователь что-то введет с клавиатуры ровно столько раз, сколько команд input() встречается в программе. Каждый input() завершается нажатием Enter на клавиатуре.\n",
+        "\n",
+        "Значения переменной, естественно, можно менять (переприсваивать).\n",
+        "```\n",
+        "print('Как тебя зовут?')\n",
+        "\n",
+        "name = input()\n",
+        "print('Привет,', name)\n",
+        "\n",
+        "name = 'Timur'\n",
+        "print('Привет,', name)\n",
+        "```\n",
+        "Оператор присваивания сообщает переменной то или иное значение независимо от того, была ли эта переменная введена раньше. Вы можете менять значение переменной, записав еще один оператор присваивания. Если у нас имеется переменная, мы можем делать с ней все что угодно — например, присвоить другой переменной или изменить значение.\n",
+        "\n",
+        "Приведенный ниже код:\n",
+        "```\n",
+        "name1 = 'Тимур'\n",
+        "name2 = name1\n",
+        "name1 = 'Гвидо'\n",
+        "\n",
+        "print(name1)\n",
+        "print(name2)\n",
+        "```\n",
+        "выводит:\n",
+        "```\n",
+        "Гвидо\n",
+        "Тимур\n",
+        "```\n",
+        "Запомни: название переменной всегда должно быть слева от знака равенства.\n",
+        "\n",
+        "Приведенный ниже код:\n",
+        "```\n",
+        "'Timur' = name\n",
+        "```\n",
+        "приводит к возникновению ошибки:\n",
+        "```\n",
+        "SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='?\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "R7KORnf03Q52"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Примечания"
+      ],
+      "metadata": {
+        "id": "eBI-x_N-4xvA"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Примечание 1.** Очень часто перед считыванием данных мы печатаем некоторый текст, чтобы пользователь, который вводит эти данные, понимал, что именно от него требуется. Например, в программе:\n",
+        "```\n",
+        "print('Как тебя зовут?')\n",
+        "name = input()\n",
+        "```\n",
+        "Мы сначала выведем текст \"Как тебя зовут?\", а уже потом считаем данные.\n",
+        "\n",
+        "Поскольку это достаточно распространенный сценарий, то в языке Python можно выводить текст, передавая его в качестве параметра в команду input(). Предыдущий код можно переписать так:\n",
+        "\n",
+        "\n",
+        "```\n",
+        "name = input('Как тебя зовут?')\n",
+        "```\n",
+        "То есть команда input() при наличии аргументов внутри нее отрабатывает одновременно как вывод текста, а потом ввод текста (именно в этом порядке). Однако в задачах нашего курса нужно использовать команду input() без параметров! Так как это будет лишний вывод, ваша программа не будет проходить тесты.\n",
+        "\n",
+        "**Примечание 2.** Имейте в виду, что мы можем принимать сразу несколько строк, а потом со всеми ними работать.\n",
+        "```\n",
+        "first = input()\n",
+        "second = input()\n",
+        "print('I am', first, 'and', second)\n",
+        "```\n",
+        "Например, если на вход программе будут поданы строки:\n",
+        "```\n",
+        "cool\n",
+        "I know it\n",
+        "```\n",
+        "то она выведет следующее:\n",
+        "```\n",
+        "I am cool and I know it\n",
+        "```\n",
+        "**Примечание 3.** Переменные можно вводить в любой момент (не только в самом начале программы):\n",
+        "```\n",
+        "name_1 = input()                          # принимаем имя первого человека\n",
+        "print('Привет, ', name_1, '!')            # делаем первый вывод\n",
+        "\n",
+        "name_2 = input()                          # принимаем имя второго человека\n",
+        "print('Здравствуйте, ', name_2, '.')      # делаем второй вывод\n",
+        "```\n",
+        "Например, если на вход программе будут поданы строки:\n",
+        "```\n",
+        "Билл\n",
+        "Тед\n",
+        "```\n",
+        "то она выведет следующее:\n",
+        "```\n",
+        "Привет, Билл !\n",
+        "Здравствуйте, Тед.\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "F4lLswVI40Fx"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Задачи"
+      ],
+      "metadata": {
+        "id": "Xc6hySnpsfrm"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. В популярном сериале «Остаться в живых» использовалась последовательность чисел 4 8 15 16 23 42, которая принесла героям удачу и помогла сорвать джекпот в лотерее. Напишите программу, которая выводит данную последовательность чисел с одним пробелом между ними.\n",
+        "\n",
+        "Примечание. Текст '4 8 15 16 23 42' не использовать."
+      ],
+      "metadata": {
+        "id": "1CjtKuiQQ1bq"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Измените предыдущую программу так, чтобы каждое число последовательности 4 8 15 16 23 42 печаталось на отдельной строке."
+      ],
+      "metadata": {
+        "id": "nhvjMHyVRIqY"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. На вход программе подается строка текста – название футбольной команды. Напишите программу, которая повторяет ее на экране со словами « - чемпион!»"
+      ],
+      "metadata": {
+        "id": "lbozMFl1SkRp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Звёздный треугольник ⭐\n",
+        "Напишите программу, которая выводит следующий треугольник, состоящий из звёздочек (*):\n",
+        "![image.png](data:image/png;base64,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)"
+      ],
+      "metadata": {
+        "id": "K3wMDGrD1fzw"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. Напишите программу, которая считывает три строки по очереди, а затем выводит их в обратной последовательности, каждую на отдельной строчке."
+      ],
+      "metadata": {
+        "id": "5E5PSZuETefg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "По умолчанию команда print() принимает несколько аргументов (параметров), выводит их через один пробел, после чего ставит перевод строки. Это поведение можно изменить, используя необязательные именованные параметры sep (separator, разделитель) и end (окончание).    \n",
+        "Значения по умолчанию у параметров sep и end следующие:   \n",
+        "sep=' '   \n",
+        "end='\\n'"
+      ],
+      "metadata": {
+        "id": "Lx1sEzmCUKk4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. Напишите программу, которая выводит на экран текст «I===like===Python» (без кавычек). Используйте необязательный параметр sep."
+      ],
+      "metadata": {
+        "id": "p7AFmT9lUphb"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. Напишите программу, которая считывает строку-разделитель и три строки с любым текстом, а затем выводит указанные строки через разделитель."
+      ],
+      "metadata": {
+        "id": "ZKOPIR4MWfpg"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8. Напишите программу, которая выводит прямоугольник, по периметру состоящий из звездочек (*).\n",
+        "\n",
+        "Примечание. Высота и ширина прямоугольника равны\n",
+        "4 и 17 звёздочкам соответственно.\n",
+        "\n",
+        "![image.png](data:image/png;base64,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)"
+      ],
+      "metadata": {
+        "id": "1iFieO-sYmT_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "9. Написать программу, которая, запрашивает два целых числа, и выводит на экран сумму и разность данных чисел:"
+      ],
+      "metadata": {
+        "id": "W4q3Ia1NZZI4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "10. Напишите программу, которая считывает два целых числа\n",
+        "и выводит на экран квадрат суммы и сумму квадратов этих чисел.\n",
+        "Пример вывода\n",
+        "\n",
+        "Квадрат суммы 3 и 2 равен 25   \n",
+        "Сумма квадратов 3 и 2 равна 13"
+      ],
+      "metadata": {
+        "id": "VllM9C2EZb6I"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "11. Напишите программу, которая приветствует пользователя, выводя слово «Привет» (без кавычек), после которого должна стоять запятая и пробел, а затем введенное имя и восклицательный знак.\n",
+        "\n",
+        "Примечание 1. Перед восклицательным знаком не должно быть пробелов."
+      ],
+      "metadata": {
+        "id": "jHnhF2qDZh_H"
+      }
+    }
+  ]
+}
